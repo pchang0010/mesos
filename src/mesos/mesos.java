@@ -1,4 +1,4 @@
-package Telefarm;
+package mesos;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -9,7 +9,7 @@ import java.awt.Color;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Font;
-import java.awt.Image;
+
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 import java.awt.Robot;
@@ -19,7 +19,7 @@ import java.awt.event.KeyListener;
 import java.util.Random;
 import javax.swing.ImageIcon;
 
-public class TelefarmGUI {
+public class mesos {
   
   private static final String VERSION_NUMBER = "2.3";
   private static final int SLEEP_DELAY = 1000;
@@ -41,9 +41,10 @@ public class TelefarmGUI {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
-          TelefarmGUI window = new TelefarmGUI();
+          mesos window = new mesos();
           window.frame.setTitle("Kanna Telefarm v" + VERSION_NUMBER);
-          window.frame.setIconImage(new ImageIcon(TelefarmGUI.class.getResource("/Telefarm/mesobag.png")).getImage());
+          window.frame.setIconImage(new ImageIcon(mesos.class.getResource("/mesos"
+              + "/mesobag.png")).getImage());
           window.frame.addKeyListener(new KeyListener() {
             boolean pressed = false;
             @Override
@@ -96,7 +97,7 @@ public class TelefarmGUI {
     
   }
 
-  public TelefarmGUI() throws AWTException{
+  public mesos() throws AWTException{
     initialize();
   }
 
@@ -119,7 +120,7 @@ public class TelefarmGUI {
     mainPanel.add(mainLabel);
     
     JButton toggleButton = new JButton("");
-    toggleButton.setIcon(new ImageIcon(TelefarmGUI.class.getResource("/Telefarm/mesobag.png")));
+    toggleButton.setIcon(new ImageIcon(mesos.class.getResource("/mesos/mesobag.png")));
     toggleButton.setFont(new Font("Comic Sans MS", Font.PLAIN, 24));
     toggleButton.setToolTipText("You can also press spacebar instead of this button!");
     toggleButton.setBounds(516, 173, 114, 109);
